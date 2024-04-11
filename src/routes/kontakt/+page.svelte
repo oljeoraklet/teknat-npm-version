@@ -102,6 +102,7 @@
 		align-items: center;
 		justify-content: center;
 		flex-wrap: wrap;
+		width: 100%;
 		gap: 1rem;
 	}
 	.produktionen .role-container {
@@ -110,7 +111,8 @@
 
 	@media (max-width: 640px) {
 		section {
-			font-size: 2rem;
+			font-size: 4vh;
+			padding: 0.5rem;
 		}
 		.role-container {
 			flex-direction: column;

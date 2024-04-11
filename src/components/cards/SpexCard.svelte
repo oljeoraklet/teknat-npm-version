@@ -45,6 +45,9 @@
 </article>
 
 <style>
+	button {
+		color: var(--color-black);
+	}
 	.modal {
 		position: fixed;
 		display: flex;
