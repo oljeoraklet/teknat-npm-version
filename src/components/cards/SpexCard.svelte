@@ -57,7 +57,7 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		width: 80vw;
-		height: 70vh;
+		height: 75vh;
 		background-color: var(--background-color-white);
 		padding: var(--standard-padding);
 		border: var(--standard-border);
@@ -84,7 +84,7 @@
 	}
 	iframe {
 		aspect-ratio: 16 / 9;
-		width: 100%;
+		width: 60%;
 	}
 
 	@media (max-width: 768px) {
@@ -95,6 +95,9 @@
 		}
 		.spex-info {
 			width: 90vw;
+		}
+		iframe {
+			width: 90%;
 		}
 	}
 </style>
