@@ -52,45 +52,27 @@
 		position: relative;
 		display: flex;
 		align-items: center;
-		overflow-x: scroll; /* Enable horizontal scrolling */
-		overflow-y: hidden; /* Disable vertical scrolling */
-		scroll-snap-type: x mandatory; /* Enable scroll snapping */
+		scroll-snap-type: x mandatory;
 		padding: var(--carousel-padding);
 		scroll-padding: var(--carousel-padding);
 		background-color: var(--color-form-yellow);
 	}
-	/* .selected {
-		border: 2px solid blue;
-	}
-	button {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		background: none;
-		border: none;
-		cursor: pointer;
-		height: 3rem;
-		width: 3rem;
-		z-index: 998;
-	}
-	.left {
-		left: 10px;
-	}
-	.right {
-		right: 10px;
-	}
-	.chevron {
-		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-	} */
+
 	ol {
 		display: flex;
-		gap: var(--carousel-spacing);
+		/* overflow: scroll; */
+		width: max-content;
+		justify-content: space-evenly;
+		gap: 12rem;
 		list-style: none;
-		width: 100%;
 		height: 100%;
 		transition: transform 0.5s;
 	}
 	li {
+		width: 100%;
 		scroll-snap-align: start;
+	}
+	@media (max-width: 768px) {
+		/*  */
 	}
 </style>

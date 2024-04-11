@@ -5,7 +5,7 @@
 
 <footer>
 	<div class="sponsors">
-		<h3>Våra Sponsorer</h3>
+		<h3>Våra Sponsorer och samarbeten</h3>
 		<div class="sponsor-grid">
 			<img class="image1" src="images/sponsorer/uppsala-kommun-logo.png" alt="APP SHACK LOGO" />
 			<img class="image2" src="images/sponsorer/teknisk-fysik-logo.png" alt="APP SHACK LOGO" />

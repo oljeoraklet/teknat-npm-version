@@ -34,4 +34,9 @@
 		font-family: var(--header-font);
 		font-size: 1.5rem;
 	}
+	@media (max-width: 768px) {
+		figure {
+			aspect-ratio: 9 / 12;
+		}
+	}
 </style>

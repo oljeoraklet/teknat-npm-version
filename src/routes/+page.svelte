@@ -38,7 +38,7 @@
 <Gallery />
 <section class="section-two">
 	<article class="bli-medlem">
-		<h2>Bli Medlem för i helvete</h2>
+		<h2>Bli Medlem</h2>
 		<p>
 			<span> Vill du inte missa någon viktig information och samtidigt stötta föreningen? </span>
 			<span>
@@ -54,7 +54,7 @@
 		/>
 	</article>
 	<article class="article-2">
-		<h2>VAD FAN ÄR ETT TEKNAT SPEX?</h2>
+		<h2>VAD ÄR ETT TEKNAT SPEX?</h2>
 		<p>
 			<span>
 				Ursprungligen gick spexet under namnet Teknologspexet och var en arbetsgrupp under dåvarande
