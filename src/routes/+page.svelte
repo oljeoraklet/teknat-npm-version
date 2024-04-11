@@ -18,7 +18,7 @@
 		{#if innerWidth < 640}
 			<RoundedButton
 				buttonText="Köp Biljetter!"
-				buttonLink="https://reginateatern.ebiljett.nu/List/TagList?tagId=118"
+				buttonLink="https://www.reginateatern.se/ett-teknat-spex-2024-digga-d%C3%B6den/"
 				withLink={true}
 				target="_blank"
 			/>
