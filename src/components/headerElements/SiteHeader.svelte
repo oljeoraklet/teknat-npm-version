@@ -25,7 +25,7 @@
 		? ' '
 		: 'not-the-top'}"
 >
-	<div class="hero-section">
+	<a class="hero-section" href="/">
 		<h1>Ett Teknat Spex</h1>
 		<img src="/images/TeknatKatten.png" alt="" />
 		{#if innerWidth < 640}
@@ -35,7 +35,7 @@
 				<div class={isOpen ? 'bar bottom open' : 'bar bottom'} />
 			</button>
 		{/if}
-	</div>
+	</a>
 	{#if isOpen || innerWidth > 640}
 		<Navbar on:close={() => (isOpen = !isOpen)} />
 	{/if}
