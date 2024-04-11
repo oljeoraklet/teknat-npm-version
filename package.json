@@ -17,6 +17,7 @@
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
 		"@types/eslint": "^8.56.0",
+		"@types/siema": "^1.4.11",
 		"@typescript-eslint/eslint-plugin": "^7.0.0",
 		"@typescript-eslint/parser": "^7.0.0",
 		"eslint": "^8.56.0",
@@ -35,9 +36,7 @@
 		"@fontsource/jost": "^5.0.17",
 		"@fontsource/modak": "^5.0.12",
 		"@fontsource/shrikhand": "^5.0.19",
-		"lucide-svelte": "^0.364.0"
-	},
-	"engines": {
-		"node": "20.x"
+		"lucide-svelte": "^0.364.0",
+		"siema": "^1.5.1"
 	}
 }

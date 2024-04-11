@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { ChevronLeft, ChevronRight } from 'lucide-svelte';
 	import GalleryPhoto from './GalleryPhoto.svelte';
-	import { onMount } from 'svelte';
+	import Carousel from './Carousel.svelte';
+	let innerWidth: number;
 	let images = [
 		'images/galleryPhotos/1.jpg',
 		'images/galleryPhotos/2.jpg',
@@ -16,61 +17,50 @@
 		'images/galleryPhotos/11.jpg',
 		'images/galleryPhotos/12.jpg'
 	];
-	let gallery: HTMLOListElement;
-	function showNextImage() {
-		gallery.scrollBy({ left: gallery.offsetWidth, behavior: 'smooth' });
-		console.log('click next');
-		console.log('gallet	scrollWidth', gallery.scrollWidth);
-	}
-
-	function showPreviousImage() {
-		gallery.scrollBy({ left: -gallery.offsetWidth, behavior: 'smooth' });
-	}
-	onMount(() => {
-		gallery.scrollTo({ left: gallery.offsetWidth, behavior: 'smooth' });
-	});
 </script>
 
+<svelte:window bind:innerWidth />
 <section>
-	<!-- <button class="left" on:click={showPreviousImage}><ChevronLeft size={48} /></button> -->
-	<ol bind:this={gallery}>
+	{#if innerWidth < 768}
+		<Carousel autoplay={4000} perPage={1}>
+			{#each images as image, index (index)}
+				<GalleryPhoto src={image} alt="Test image" caption="Teknat 2023" />
+			{/each}
+			<span slot="left-control"><ChevronLeft size={48} /></span>
+			<span slot="right-control"><ChevronRight size={48} /></span>
+		</Carousel>
+	{:else}
+		<Carousel autoplay={4000} perPage={2}>
+			{#each images as image, index (index)}
+				<GalleryPhoto src={image} alt="Test image" caption="Teknat 2023" />
+			{/each}
+			<span slot="left-control"><ChevronLeft size={64} /></span>
+			<span slot="right-control"><ChevronRight size={64} /></span>
+		</Carousel>
+	{/if}
+
+	<!-- <button class="left" on:click={showPreviousImage}></button> -->
+	<!-- <ol bind:this={gallery}>
 		{#each images as image, index}
 			<li>
 				<GalleryPhoto src={image} alt="Test image" caption="Teknat 2023" />
 			</li>
 		{/each}
-	</ol>
+	</ol> -->
 	<!-- <button class="right" on:click={showNextImage}><ChevronRight size={48} /></button> -->
 </section>
 
 <style>
 	section {
 		width: 100%;
-		height: 32rem;
-		overflow-y: scroll;
+		/* height: 32rem; */
 		border-bottom: var(--standard-border);
 		position: relative;
 		display: flex;
 		align-items: center;
 		scroll-snap-type: x mandatory;
-		padding: var(--carousel-padding);
-		scroll-padding: var(--carousel-padding);
+		padding: 1rem;
 		background-color: var(--color-form-yellow);
-	}
-
-	ol {
-		display: flex;
-		/* overflow: scroll; */
-		width: max-content;
-		justify-content: space-evenly;
-		gap: 12rem;
-		list-style: none;
-		height: 100%;
-		transition: transform 0.5s;
-	}
-	li {
-		width: 100%;
-		scroll-snap-align: start;
 	}
 	@media (max-width: 768px) {
 		/*  */
