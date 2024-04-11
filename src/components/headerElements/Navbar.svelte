@@ -158,7 +158,7 @@
 	.btn-2:hover {
 		background-color: hsla(92, 34%, 56%, 100%);
 	}
-	@media (max-width: 640px) {
+	@media (max-width: 768px) {
 		nav {
 			box-sizing: content-box;
 			border-left: var(--standard-border);

@@ -1,16 +1,56 @@
 <script lang="ts">
 	import { Mail } from 'lucide-svelte';
+	import { fade } from 'svelte/transition';
 
 	export let roleName: string;
 	export let roleTitle: string;
 	export let roleMail: string = '';
+
+	let isEmailTooltipShown = false;
+	let toolTipText = 'Klicka för att kopiera mejlen!';
+	$: console.log(isEmailTooltipShown);
+	function mouseEnter() {
+		isEmailTooltipShown = true;
+	}
+	function mouseLeave() {
+		isEmailTooltipShown = false;
+	}
+	function copyMail() {
+		toolTipText = 'Mejlen kopierad!';
+		navigator.clipboard.writeText(roleMail);
+		setTimeout(() => {
+			isEmailTooltipShown = false;
+			toolTipText = 'Klicka för att kopiera mejlen!';
+		}, 2000);
+	}
+	function handleKeyDown(event: KeyboardEvent) {
+		if (event.key === 'Enter' || event.key === 'Space') {
+			copyMail();
+		}
+	}
 </script>
 
 <article>
 	<p>{roleTitle}</p>
 	<h3>{roleName}</h3>
 	{#if roleMail != ''}
-		<a href="mailto:{roleMail}"><Mail />{roleMail}</a>
+		<div
+			on:mouseenter={mouseEnter}
+			on:mouseleave={mouseLeave}
+			class="email-container"
+			on:click={copyMail}
+			role="button"
+			tabindex="0"
+			on:keydown={handleKeyDown}
+		>
+			<Mail class="email-icon" />
+			<a href="mailto:{roleMail}">{roleMail}</a>
+			{#if isEmailTooltipShown}
+				<p transition:fade={{ duration: 200 }} class="email-tooltip">
+					{toolTipText}
+				</p>
+			{/if}
+		</div>
 	{/if}
 </article>
 
@@ -40,13 +80,43 @@
 		font-family: var(--standard-font);
 		color: var(--color-black-faded);
 	}
-	a {
-		font-size: 1.25rem;
+	.email-container {
+		position: relative;
+		color: var(--color-black);
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
+		cursor: pointer;
+	}
+	.email-tooltip {
+		position: absolute;
+		font-size: 1rem;
+		bottom: 120%;
+		left: 5%;
+		width: 12rem;
+		color: black;
+		transform: translateX(-50%);
+		background-color: var(--background-color-white);
+		padding: 0.5rem;
+		border: var(--standard-border);
+		border-radius: var(--buttton-border-radius);
+		box-shadow: var(--standard-box-shadow);
+		pointer-events: none;
+	}
+	.email-tooltip::after {
+		content: '';
+		position: absolute;
+		top: 110%;
+		left: 50%;
+		transform: translateX(-50%);
+		border: 0.5rem solid transparent;
+		border-top-color: var(--color-black);
+	}
+	a {
+		font-size: 1.25rem;
+
 		font-family: var(--standard-font);
-		color: var(--color-black);
+
 		transition: color 150ms ease-in-out;
 	}
 	a:hover {
