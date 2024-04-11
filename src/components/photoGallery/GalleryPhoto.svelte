@@ -11,6 +11,7 @@
 
 <style>
 	figure {
+		margin: 1rem;
 		height: 100%;
 		aspect-ratio: 3 / 2;
 		display: flex;
