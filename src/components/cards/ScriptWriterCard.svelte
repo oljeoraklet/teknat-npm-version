@@ -15,6 +15,7 @@
 		flex-direction: column;
 		justify-content: space-evenly;
 		width: max-content;
+		max-width: 90%;
 		padding: 1rem var(--standard-padding);
 		background-color: var(--background-color-white);
 		border: var(--standard-border);

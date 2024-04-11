@@ -45,10 +45,9 @@
 <style>
 	section {
 		width: 100vw;
-		/* height: 80vh; */
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
+		gap: 2rem;
 		border-bottom: var(--standard-border);
 		justify-content: center;
 		align-items: center;
@@ -88,6 +87,28 @@
 		justify-content: center;
 		align-items: center;
 		padding: var(--standard-padding);
-		width: 60%;
+		width: 70%;
+	}
+	@media (max-width: 768px) {
+		section {
+			font-size: 2rem;
+			padding: 0.5rem;
+			gap: 0.5rem;
+		}
+		.spex-container {
+			width: 100%;
+			padding: 0.5rem;
+		}
+		h3 {
+			font-size: 2rem;
+		}
+		p {
+			font-size: 1rem;
+		}
+		article {
+			width: 100%;
+			padding: 0;
+			gap: 0.5rem;
+		}
 	}
 </style>

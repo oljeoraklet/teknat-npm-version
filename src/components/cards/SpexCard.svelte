@@ -32,8 +32,6 @@
 				<p>Det finns tyvärr ingen video för detta spex</p>
 			{:else}
 				<iframe
-					width="760"
-					height="515"
 					src={spexYoutube}
 					title={spexName}
 					frameborder="0"
@@ -83,5 +81,20 @@
 		position: absolute;
 		top: 0;
 		right: 0;
+	}
+	iframe {
+		aspect-ratio: 16 / 9;
+		width: 100%;
+	}
+
+	@media (max-width: 768px) {
+		.modal {
+			width: 90vw;
+			height: 80vh;
+			justify-content: space-evenly;
+		}
+		.spex-info {
+			width: 90vw;
+		}
 	}
 </style>
