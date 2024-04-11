@@ -10,15 +10,13 @@
 	let oldScrollY = 0;
 
 	let isScrollingDown = false;
+	const threshold = 5; // Set the threshold for scroll change
 
 	$: {
-		if (scrollY > oldScrollY) {
-			//scrolling down
-			isScrollingDown = true;
-		} else {
-			isScrollingDown = false;
+		if (Math.abs(scrollY - oldScrollY) > threshold) {
+			isScrollingDown = scrollY > oldScrollY;
+			oldScrollY = scrollY;
 		}
-		oldScrollY = scrollY;
 	}
 </script>
 
@@ -41,10 +39,10 @@
 		transition: 150ms padding-top ease-in-out;
 	}
 	.not-scroll {
-		padding-top: 19rem;
+		padding-top: 13rem;
 	}
 	.scroll {
-		padding-top: 14rem;
+		padding-top: 8rem;
 	}
 	@media (max-width: 640px) {
 		.content {

@@ -9,20 +9,22 @@
 	let oldScrollY = 0;
 
 	let isScrollingDown = false;
+	const threshold = 10; // Set the threshold for scroll change
 
 	$: {
-		if (scrollY > oldScrollY) {
-			//scrolling down
-			isScrollingDown = true;
-		} else {
-			isScrollingDown = false;
+		if (Math.abs(scrollY - oldScrollY) > threshold) {
+			isScrollingDown = scrollY > oldScrollY;
+			oldScrollY = scrollY;
 		}
-		oldScrollY = scrollY;
 	}
 </script>
 
 <svelte:window bind:innerWidth bind:scrollY />
-<header class={isScrollingDown && innerWidth > 640 ? 'scrolling-down' : ''}>
+<header
+	class="{isScrollingDown && innerWidth > 640 ? 'scrolling-down' : ''} {scrollY < 3
+		? ' '
+		: 'not-the-top'}"
+>
 	<div class="hero-section">
 		<h1>Ett Teknat Spex</h1>
 		<img src="/images/TeknatKatten.png" alt="" />
@@ -40,8 +42,20 @@
 </header>
 
 <style>
+	/* @media (min-width: 640px) {
+		
+		.not-the-top {
+			height: 13rem;
+		}
+		.not-the-top .hero-section {
+			height: 8rem;
+		}
+		.not-the-top h1 {
+			font-size: 6rem;
+		}
+	} */
 	.scrolling-down {
-		height: 14rem;
+		height: 8rem !important;
 	}
 	.hamburger {
 		right: 1.25rem;
@@ -81,13 +95,13 @@
 		position: fixed;
 		width: 100vw;
 		background-color: var(--background-color-white);
-		z-index: 2;
-		height: 19rem;
+		z-index: 999;
+		height: 13rem;
 		transition: 150ms height ease-in-out;
 	}
 	.hero-section {
 		display: flex;
-		height: 14rem;
+		height: 8rem;
 		border-bottom: var(--standard-border);
 		justify-content: space-between;
 		position: relative;
@@ -95,25 +109,27 @@
 		background-color: var(--background-color-white);
 		overflow: hidden;
 		z-index: 2;
+		transition: height 0.2s ease-in-out;
 	}
 	h1 {
 		/* padding-top: 2rem; */
 		font-family: var(--site-header-font);
 		font-weight: 400;
-		font-size: 13rem;
+		font-size: 12vh;
+		transition: font-size 0.2s ease-in-out;
 	}
 	img {
 		position: absolute;
 		object-fit: contain;
 		right: 2rem;
-		bottom: -5rem;
-		height: 14rem;
+		bottom: -4rem;
+		height: 10rem;
 		transform-origin: center;
 		transform: rotate(12deg);
 		transition: transform 0.2s ease-in-out;
 	}
 	img:hover {
-		transform: scale(1.2) rotate(0deg) translate(0, -2rem);
+		transform: scale(1.1) rotate(0deg) translate(0, -1rem);
 	}
 	@media (max-width: 640px) {
 		header {

@@ -1,114 +1,148 @@
 {
-	"Teknologspexet": [
+	"spex": [
 		{
-			"title": "Wasa eller Botten Upp",
-			"year": 1995
+			"title": "Teknologspexet",
+			"entries": [
+				{
+					"title": "Wasa eller Botten Upp",
+					"year": 1995
+				},
+				{
+					"title": "Bomber eller Strålande tider på bar manhattan",
+					"year": 1996
+				},
+				{
+					"title": "Jeanne d'Arc eller Den eldiga jungfrun",
+					"year": 1997,
+					"youtube": "https://www.youtube.com/embed/0RrpSHskM44"
+				},
+				{
+					"title": "Baskervilles räv eller Ett listigt spex",
+					"year": 1998,
+					"youtube": "https://www.youtube.com/embed/XuBLxQ0305k"
+				},
+				{
+					"title": "Vägvärk eller Ett spex i rätt riktning",
+					"year": 1999,
+					"youtube": "https://www.youtube.com/embed/E_iTh6JnVvQ"
+				},
+				{
+					"title": "Det var bättre nu eller Ett spex i rättan tid",
+					"year": 2000,
+					"youtube": "https://www.youtube.com/embed/A2g1ussaRHQ"
+				},
+				{
+					"title": "Titanic eller Ett skottsäkert spex",
+					"year": 2001,
+					"youtube": "https://www.youtube.com/embed/JY6F3N3yUcE"
+				},
+				{
+					"title": "Måndag eller Ett uppskjutet spex",
+					"year": 2002,
+					"youtube": "https://www.youtube.com/embed/W87JhN0k3uo"
+				}
+			]
 		},
 		{
-			"title": "Bomber eller Strålande tider på bar manhattan",
-			"year": 1996
+			"title": "Ett Teknat Spex",
+			"entries": [
+				{
+					"title": "World Wars Episode II - Trojanerna anfaller eller Ett RISKfyllt spex",
+					"year": 2003,
+					"youtube": "https://www.youtube.com/embed/50ogEczpOb0"
+				},
+				{
+					"title": "X - ett spex utan Y eller Fula nyanser av brunt",
+					"year": 2004,
+					"youtube": "https://www.youtube.com/embed/wenJOzr-Ydw"
+				},
+				{
+					"title": "Shogun eller Ett origamispex som viker ut sig",
+					"year": 2005,
+					"youtube": "https://www.youtube.com/embed/LsUOtaJKtng"
+				},
+				{
+					"title": "Heist eller Ett spex som devalverar marken",
+					"year": 2006,
+					"youtube": "https://www.youtube.com/embed/1SdBh-mDXT0"
+				},
+				{
+					"title": "C-men eller Ett spex med genvägar som artar sig",
+					"year": 2007,
+					"youtube": "https://www.youtube.com/embed/mJruLxPg75g"
+				},
+				{
+					"title": "d'Arn eller Ett spex med revolution som täckmantel",
+					"year": 2008,
+					"youtube": "https://www.youtube.com/embed/jaW29ggTV3U"
+				},
+				{
+					"title": "1986 eller Ett spex som blev ett skottår",
+					"year": 2009,
+					"youtube": "https://www.youtube.com/embed/StKp3FPBn98"
+				},
+				{
+					"title": "En miss i universum eller Ett jordnära spex om solens fläckiga förflutna",
+					"year": 2010
+				},
+				{
+					"title": "Drottning Kristina, Drottning Kristina eller Det ekar i skogen",
+					"year": 2011
+				},
+				{
+					"title": "Montezuma eller Ett texmex spex",
+					"year": 2012
+				},
+				{
+					"title": "Sessan, socialisten och statskuppen eller Ett spex utan klass",
+					"year": 2013
+				},
+				{
+					"title": "Lilla Storhornet eller Ett tipiskt indiespex",
+					"year": 2014
+				},
+				{
+					"title": "Ragnarök eller Val i Valhall",
+					"year": 2015,
+					"youtube": "https://www.youtube.com/embed/_pKOHQgC_rE"
+				},
+				{
+					"title": "Helgon och häxbladning eller bara ett bål",
+					"year": 2016
+				},
+				{
+					"title": "DaVimsikoden eller Ett spel för galleriet",
+					"year": 2017
+				},
+				{
+					"title": "Murphys Dag eller Tillbaka till samtiden",
+					"year": 2018
+				},
+				{
+					"title": "Rom, Romare eller Etruskigt över-askande spex",
+					"year": 2019
+				},
+				{
+					"title": "Skapelsebekräftelsen eller Den gamla och kravet eller Äpplet faller inte långt från trädet",
+					"year": 2022,
+					"youtube": "https://www.youtube.com/embed/_y3t-cC3kM4"
+				},
+				{
+					"title": "En reaktorisk fråga eller Attack för maten",
+					"year": 2023,
+					"youtube": "https://www.youtube.com/embed/RqFq6DWpILI"
+				}
+			]
 		},
 		{
-			"title": "Jeanne d'Arc eller Den eldiga jungfrun",
-			"year": 1997
-		},
-		{
-			"title": "Baskervilles räv eller Ett listigt spex",
-			"year": 1998
-		},
-		{
-			"title": "Vägvärk eller Ett spex i rätt riktning",
-			"year": 1999
-		},
-		{
-			"title": "Det var bättre nu eller Ett spex i rättan tid",
-			"year": 2000
-		},
-		{
-			"title": "Titanic eller Ett skottsäkert spex",
-			"year": 2001
-		},
-		{
-			"title": "Måndag eller Ett uppskjutet spex",
-			"year": 2002
-		}
-	],
-	"Ett teknat spex": [
-		{
-			"title": "World Wars Episode II - Trojanerna anfaller eller Ett RISKfyllt spex",
-			"year": 2003
-		},
-		{
-			"title": "X - ett spex utan Y eller Fula nyanser av brunt",
-			"year": 2004
-		},
-		{
-			"title": "Shogun eller Ett origamispex som viker ut sig",
-			"year": 2005
-		},
-		{
-			"title": "Heist eller Ett spex som devalverar marken",
-			"year": 2006
-		},
-		{
-			"title": "C-men eller Ett spex med genvägar som artar sig",
-			"year": 2007
-		},
-		{
-			"title": "d'Arn eller Ett spex med revolution som täckmantel",
-			"year": 2008
-		},
-		{
-			"title": "1986 eller Ett spex som blev ett skottår",
-			"year": 2009
-		},
-		{
-			"title": "En miss i universum eller Ett jordnära spex om solens fläckiga förflutna",
-			"year": 2010
-		},
-		{
-			"title": "Drottning Kristina, Drottning Kristina eller Det ekar i skogen",
-			"year": 2011
-		},
-		{
-			"title": "Montezuma eller Ett texmex spex",
-			"year": 2012
-		},
-		{
-			"title": "Sessan, socialisten och statskuppen eller Ett spex utan klass",
-			"year": 2013
-		},
-		{
-			"title": "Lilla Storhornet eller Ett tipiskt indiespex",
-			"year": 2014
-		},
-		{
-			"title": "Ragnarök eller Val i Valhall",
-			"year": 2015
-		},
-		{
-			"title": "Helgon och häxbladning eller bara ett bål",
-			"year": 2016
-		},
-		{
-			"title": "DaVimsikoden eller Ett spel för galleriet",
-			"year": 2017
-		},
-		{
-			"title": "Murphys Dag eller Tillbaka till samtiden",
-			"year": 2018
-		},
-		{
-			"title": "Rom, Romare eller Etruskigt över-askande spex",
-			"year": 2019
-		},
-		{
-			"title": "Skapelsebekräftelsen eller Den gamla och kravet eller Äpplet faller inte långt från trädet",
-			"year": 2022
-		},
-		{
-			"title": "En reaktorisk fråga eller Attack för maten",
-			"year": 2023
+			"title": "Spex producerat av Ett teknat spex men under namnet Uppsalas samlade spexare",
+			"entries": [
+				{
+					"title": "Tramses II eller Ett pyramidalt misstag",
+					"year": 2007,
+					"youtube": "https://www.youtube.com/embed/ymhpf1G8T4E"
+				}
+			]
 		}
 	]
 }

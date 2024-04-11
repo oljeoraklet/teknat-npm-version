@@ -12,20 +12,21 @@
 <style>
 	figure {
 		height: 100%;
-		width: 16rem;
+		aspect-ratio: 3 / 2;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		border: var(--standard-border);
 		padding: 1rem;
 		border-radius: var(--picture-border-radius);
+		background-color: var(--background-color-white);
 
 		box-shadow: var(--standard-box-shadow);
 	}
 
 	img {
 		width: 100%;
-		height: 80%;
+		height: 90%;
 		object-fit: cover;
 	}
 

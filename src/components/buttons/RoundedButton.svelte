@@ -4,18 +4,19 @@
 	export let buttonLink = '';
 	export let onForm = false;
 	export let target = '_self';
+	export let size = 'medium';
 </script>
 
 {#if withLink}
-	<button>
+	<button class={size}>
 		<a href={buttonLink} {target} rel="noopener noreferrer">{buttonText}</a>
 	</button>
 {:else if onForm}
-	<button type="submit">
+	<button class={size} type="submit">
 		{buttonText}
 	</button>
 {:else}
-	<button>
+	<button class={size}>
 		{buttonText}
 	</button>
 {/if}
@@ -38,6 +39,11 @@
 		box-shadow: 4px 4px 0px var(--color-black);
 		translate: -4px -4px;
 		transition: 150ms all ease-in-out;
+	}
+	.large {
+		width: 16rem;
+		height: 5rem;
+		font-size: 1.5rem;
 	}
 	button:hover {
 		box-shadow: 0px 0px 0px var(--color-black);

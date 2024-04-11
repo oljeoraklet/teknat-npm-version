@@ -2,6 +2,7 @@
 	/* Colors */
 	--background-color-white: #fbfbf2;
 	--color-black: #2b2b2b;
+	--color-black-faded: #6e6e6e;
 	--color-square-pink: #c64191;
 	--color-section-yellow: #fdcb5e;
 	--color-form-yellow: #fae2a0;
@@ -10,6 +11,7 @@
 	--color-square-orange: #ecdcb0;
 	--color-square-yellow: #f0f3bd;
 	--color-square-teal: #00bfb2;
+	--color-square-babyblue: #5064a3;
 
 	/* Spacing */
 	--navbar-spacing: 4.375rem;

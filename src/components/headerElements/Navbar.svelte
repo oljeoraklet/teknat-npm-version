@@ -15,15 +15,13 @@
 	let oldScrollY = 0;
 
 	let isScrollingDown = false;
+	const threshold = 10; // Set the threshold for scroll change
 
 	$: {
-		if (scrollY > oldScrollY) {
-			//scrolling down
-			isScrollingDown = true;
-		} else {
-			isScrollingDown = false;
+		if (Math.abs(scrollY - oldScrollY) > threshold) {
+			isScrollingDown = scrollY > oldScrollY;
+			oldScrollY = scrollY;
 		}
-		oldScrollY = scrollY;
 	}
 </script>
 
@@ -37,27 +35,53 @@
 		<li><a on:click={close} href="/">Hem</a></li>
 		<li><a on:click={close} href="/arets-spex">Årets Spex</a></li>
 		<li><a on:click={close} href="/tidigare-spex">Tidigare Spex</a></li>
-		<li><a on:click={close} href="/kalendarium">Kalendarium</a></li>
-		<li>
-			<a on:click={close} href="https://www.facebook.com/ettteknatspex" target="_blank"
-				><Facebook /></a
-			>
-		</li>
-		<li>
-			<a
-				on:click={close}
-				href="https://www.instagram.com/ettteknatspex?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-				target="_blank"><Instagram /></a
-			>
-		</li>
-		<li>
-			<a on:click={close} href="https://www.youtube.com/@Teknatspexet" target="_blank"
-				><Youtube /></a
-			>
-		</li>
+		{#if innerWidth < 640}
+			<li>
+				<a on:click={close} href="https://www.facebook.com/ettteknatspex" target="_blank"
+					><Facebook />Facebook</a
+				>
+			</li>
+			<li>
+				<a
+					on:click={close}
+					href="https://www.instagram.com/ettteknatspex?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+					target="_blank"><Instagram />Instagram</a
+				>
+			</li>
+			<li>
+				<a on:click={close} href="https://www.youtube.com/@Teknatspexet" target="_blank"
+					><Youtube />YouTube</a
+				>
+			</li>
+		{:else}
+			<li>
+				<a on:click={close} href="https://www.facebook.com/ettteknatspex" target="_blank"
+					><Facebook /></a
+				>
+			</li>
+			<li>
+				<a
+					on:click={close}
+					href="https://www.instagram.com/ettteknatspex?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+					target="_blank"><Instagram /></a
+				>
+			</li>
+			<li>
+				<a on:click={close} href="https://www.youtube.com/@Teknatspexet" target="_blank"
+					><Youtube /></a
+				>
+			</li>
+		{/if}
+		<!-- <li><a on:click={close} href="/kalendarium">Kalendarium</a></li> -->
 	</ul>
 	<div class="btn-group">
-		<a on:click={close} class="btn-1" href="/bli-medlem">Bli Medlem</a>
+		<a
+			on:click={close}
+			class="btn-1"
+			href="https://docs.google.com/forms/d/e/1FAIpQLScrpIpgHuJ9TL9QQpzxHZX603HVk8AHDFqhr_E05pQqUzDBxQ/viewform"
+			target="_blank"
+			rel="noopener noreferrer">Bli Medlem</a
+		>
 		<a on:click={close} class="btn-2" href="/kontakt">Kontakt</a>
 	</div>
 </nav>
@@ -83,6 +107,9 @@
 		color: var(--standard-text-color);
 		font-family: var(--standard-font);
 		font-size: 1.25rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 	}
 	li {
 		transition: transform 150ms ease-in-out;
@@ -154,7 +181,8 @@
 			flex-direction: column;
 		}
 		li {
-			text-align: right;
+			display: flex;
+			justify-content: right;
 			width: 100%;
 			padding: 1rem;
 		}
