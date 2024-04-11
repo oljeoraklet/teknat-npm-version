@@ -91,13 +91,19 @@
 	}
 	@media (max-width: 768px) {
 		section {
-			font-size: 2rem;
+			font-size: 4vh;
 			padding: 0.5rem;
 			gap: 0.5rem;
+		}
+		.historia {
+			height: 100vh;
 		}
 		.spex-container {
 			width: 100%;
 			padding: 0.5rem;
+		}
+		h2 {
+			font-size: 4vh;
 		}
 		h3 {
 			font-size: 2rem;
