@@ -36,6 +36,7 @@
 <style>
 	footer {
 		width: 100vw;
+		text-align: center;
 	}
 	img {
 		width: auto;

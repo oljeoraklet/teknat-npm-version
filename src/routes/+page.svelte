@@ -8,14 +8,14 @@
 <svelte:window bind:innerWidth />
 <section class="arets-spex">
 	{#if innerWidth < 640}
-		<img src="/images/arets-spex/portrait-digga.png" alt="" />
+		<img src="/images/arets-spex/kristen-banner.jpg" alt="" />
 	{:else}
-		<img src="/images/arets-spex/digga-doden-banner.png" alt="" />
+		<img src="/images/arets-spex/kristen-banner.jpg" alt="" />
 	{/if}
 
-	<h2>Ett Teknat Spex 2024: Digga Döden</h2>
+	<h2 class="spex-title">Ett Teknat Spex 2026:<br> Kris(✟)en i befolkningsfrågan</h2>
 	<div class="btn-container">
-		{#if innerWidth < 640}
+		<!-- {#if innerWidth < 640}
 			<RoundedButton
 				buttonText="Köp Biljetter!"
 				buttonLink="https://www.reginateatern.se/ett-teknat-spex-2024-digga-d%C3%B6den/"
@@ -30,9 +30,9 @@
 				withLink={true}
 				target="_blank"
 				size="large"
-			/>
+			/> -->
 			<RoundedButton buttonText="Läs mer!" buttonLink="/arets-spex" withLink={true} size="large" />
-		{/if}
+		<!-- {/if} -->
 	</div>
 </section>
 <Gallery />
@@ -77,14 +77,14 @@
 
 <style>
 	.arets-spex {
-		background-color: var(--color-square-babyblue);
+		background-color: #f4f7b3;
 		color: var(--background-color-white);
 		display: flex;
 		gap: 1rem;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		color: white;
+		color: black;
 		position: relative;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 		padding: var(--standard-padding);
@@ -128,6 +128,7 @@
 		font-family: var(--header-font);
 		text-transform: uppercase;
 	}
+	
 	p {
 		display: flex;
 		flex-direction: column;

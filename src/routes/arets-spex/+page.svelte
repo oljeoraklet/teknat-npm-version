@@ -7,35 +7,29 @@
 <svelte:window bind:innerWidth />
 <section class="arets-spex">
 	{#if innerWidth < 640}
-		<img src="/images/arets-spex/portrait-digga.png" alt="" />
+		<img src="/images/arets-spex/kristen-banner.jpg" alt="" />
 	{:else}
-		<img src="/images/arets-spex/digga-doden-banner.png" alt="" />
+		<img src="/images/arets-spex/kristen-banner.jpg" alt="" />
 	{/if}
 	<article>
-		<h2>Ett Teknat Spex 2024: Digga Döden</h2>
+		<h2>Ett Teknat Spex 2026:</h2>
+		<h2>Kris(✟)en i befolkningsfrågan</h2>
 		<p>
 			<span>
-				Varmt välkomna till det glada 1300-talet, en tid då både digerdöd och tyranniska despoter
-				härjar fritt i varje svensk by. Men inte hänger vi läpp för det, tvärtom bjuder Ett teknat
-				spex in till att digga döden i en riktig skrattfest där vi ser misären från den ljusa sidan!
+				Den svarta röken stiger än en gång ur det Sixtinska kapellets kopparskorsten. 
+				Kyrkklockornas klämtande överröstas av nunnors (och en kardinals) klagosång. Liemannen skonar ingen, inte ens den lilla människan. 
+				Småstadsdöden grasserar nämligen obönhörligt genom Europa och varmast brinner skärselden för Vatikanstatens diverse småföretagare och bidragstagare. 
+				Flykten till storstaden lämnar inte mycket mer än en passage till Fontana di Trevi bakom sig. Hur blir man egentligen fler, i ett land där man inte får synda?
 			</span>
 			<span>
-				I en by dold någonstans bland de uppländska leråkrarna råder lugnet före stormen: här har
-				man inte haft pest på flera år och den lokala envåldshärskaren är älskad av alla. Eller? I
-				utkanten av byn planerar en otippad trio årtiondets minsta bondeuppror, och från Köpenhamn
-				beger sig två danska herrar mot Sverige med mer än bara oblater och tuborg i bagaget. Snart
-				hotas lugnet av både danska präster och fritänkande kvinnor på fri fot. Och i varje hörn
-				lurar historiens största farsot. För ni vet väl att ni aldrig är mer än 50 meter från en
-				råtta?</span
-			>
-			<span>
-				Som ni hör, här finns något för alla eller åtminstone för 2/3 av Europas befolkning. Varmt
-				välkomna till Ett teknat spex 2024: Digga Döden
+				
+			2026 är året då Ett teknat spex ger en unik inblick i historien bakom Vatikanstaten. 
+			Bland oblaterior och befolkningshelgon får vi följa med när världens mest omtalade (eller i alla fall minsta) teokratiska monarki står öga mot öga och tand för tand med döden – småstatsdöden.
 			</span>
-			<span>Regi: Adeline Arvidsson</span>
-			<span>Manus: Malla Grenfeldt, Vilhelm Månesköld & Felix Waern</span>
+			<span>Regi: Clara Lindvall & Miranda de Léon</span>
+			<span>Manus: Love Nilsson, Jonathan Rosengren & Elin Mann</span>
 		</p>
-		{#if innerWidth < 640}
+		<!-- {#if innerWidth < 640}
 			<RoundedButton
 				buttonText="Köp Biljetter!"
 				buttonLink="https://reginateatern.ebiljett.nu/List/TagList?tagId=118"
@@ -50,20 +44,20 @@
 				target="_blank"
 				size="large"
 			/>
-		{/if}
+		{/if} -->
 	</article>
 </section>
 
 <style>
 	.arets-spex {
-		background-color: var(--color-square-babyblue);
-		color: var(--background-color-white);
+		background-color: #f4f7b3;
+		color: var(--background-color-black);
 		display: flex;
-		gap: 1rem;
+		/* gap: 1rem; */
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		color: white;
+		color: black;
 		position: relative;
 		text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 		padding: 1rem;
@@ -106,6 +100,7 @@
 		text-align: center;
 		font-family: var(--header-font);
 		text-transform: uppercase;
+		color: var(--color-black) ,
 	}
 	.arets-spex p {
 		padding: 0.5rem;

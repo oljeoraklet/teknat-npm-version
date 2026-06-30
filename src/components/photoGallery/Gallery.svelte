@@ -15,7 +15,8 @@
 		'images/galleryPhotos/9.jpg',
 		'images/galleryPhotos/10.jpg',
 		'images/galleryPhotos/11.jpg',
-		'images/galleryPhotos/12.jpg'
+		'images/galleryPhotos/12.jpg',
+		'images/galleryPhotos/13.jpg',
 	];
 </script>
 
@@ -24,7 +25,7 @@
 	{#if innerWidth < 768}
 		<Carousel autoplay={4000} perPage={1}>
 			{#each images as image, index (index)}
-				<GalleryPhoto src={image} alt="Test image" caption="Teknat 2023" />
+				<GalleryPhoto src={image} alt="Test image" caption="Teknat 2026" />
 			{/each}
 			<span slot="left-control"><ChevronLeft size={48} /></span>
 			<span slot="right-control"><ChevronRight size={48} /></span>
@@ -32,7 +33,7 @@
 	{:else}
 		<Carousel autoplay={4000} perPage={2}>
 			{#each images as image, index (index)}
-				<GalleryPhoto src={image} alt="Test image" caption="Teknat 2023" />
+				<GalleryPhoto src={image} alt="Test image" caption="Teknat 2026" />
 			{/each}
 			<span slot="left-control"><ChevronLeft size={64} /></span>
 			<span slot="right-control"><ChevronRight size={64} /></span>

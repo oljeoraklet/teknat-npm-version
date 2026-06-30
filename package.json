@@ -33,7 +33,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/blaka-hollow": "^5.2.8",
 		"@fontsource/jost": "^5.0.17",
+		"@fontsource/luckiest-guy": "^5.2.8",
 		"@fontsource/modak": "^5.0.12",
 		"@fontsource/shrikhand": "^5.0.19",
 		"lucide-svelte": "^0.364.0",

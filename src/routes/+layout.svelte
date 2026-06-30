@@ -2,13 +2,14 @@
 	import '@fontsource/modak';
 	import '@fontsource/jost';
 	import '@fontsource/shrikhand';
+	import '@fontsource/luckiest-guy';
+	import '@fontsource/blaka-hollow';
 	import '../global.css';
 	import SiteHeader from '../components/headerElements/SiteHeader.svelte';
 	import Footer from '../components/footerElements/Footer.svelte';
 
 	let scrollY: number;
 	let oldScrollY = 0;
-
 	let isScrollingDown = false;
 	const threshold = 5; // Set the threshold for scroll change
 
